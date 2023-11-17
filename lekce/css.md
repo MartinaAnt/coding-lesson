@@ -661,16 +661,3 @@ případně [mozilla developer](https://developer.mozilla.org/).
 
 Na stránkách w3school nalezneš i&nbsp;sekci [How To](https://www.w3schools.com/howto/default.asp) (jak na to), kde je
 obrovská databáze veškerých webových "vychytávek".
-
-Pokud to myslíš s tvorbou webových stránek vážně, tak je potřeba se naučit JavaScript a&nbsp;nějaký framework. Velmi
-populární pro začátek je framework [Bootstrap](https://getbootstrap.com/), který pochází od vývojářů twitteru.
-W3school vyvíjí vlastní framework [W3.CSS](https://www.w3schools.com/w3css/), který je pro začátek asi nejlepší volbou.
-
-A pak jsou tady "_těžké váhy_" frontend frameworků, které stojí hlavně na JavaScriptu:
-
-- [React](https://reactjs.org/)
-- [Angular](https://angular.io/)
-- [Vue.js](https://vuejs.org/)
-
-Pro začátečníky se doporučuje **React** nebo **Vue**. **React** má nejširší základnu uživatelů, **Vue** je jednodušší především pro člověka,
-který v JS nemá pevné základy. **Angular** je velmi komplexní, i proto je spíš na ústupu, ale zároveň právě proto a také protože je nejstarší z těch tří, jede na něm řada firem a velkých projektů.

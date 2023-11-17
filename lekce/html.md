@@ -20,8 +20,6 @@ A co ten JavaScript? JavaScript už programovací jazyk je. Byl vytvořen přím
 Umožňuje, aby byl web živý, dynamický. Pomocí JavaScriptu se řeší složitější
 animace, funkce **drag and drop** (tahni a&nbsp;pusť) a&nbsp;další vymoženosti moderního webu.
 
-Konec nudné teorie, jdeme psát weby!!!
-
 ## HTML
 
 Soubor s příponou **\*.html** je obyčejný textový soubor. Otevři si svůj textový editor a&nbsp;do něho napiš:
