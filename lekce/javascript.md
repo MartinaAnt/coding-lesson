@@ -2,9 +2,7 @@
 
 ## Co je JavaScript?
 
-JavaScript je skriptovací jazyk používaný k tvorbě interaktivních a dynamických webových stránek. Je interpretovaný, což znamená, že běží přímo v prohlížeči, a umožňuje manipulaci s obsahem stránky a reakce na uživatelské akce.
-
-Byl vynalezen Brendenem Eichem.
+JavaScript je skriptovací jazyk používaný k tvorbě interaktivních a dynamických webových stránek. Běží přímo v prohlížeči a umožňuje manipulaci s obsahem stránky a reakce na uživatelské akce. Byl vynalezen Brendenem Eichem.
 
 JavaScript samotný je relativně kompaktní, ale velmi flexibilní. Vývojáři napsali různé nástroje nad jádrem jazyka JavaScript odemykající obrovské množství funkcionalit. Mezi ně patří:
 
@@ -38,21 +36,25 @@ JavaScript samotný je relativně kompaktní, ale velmi flexibilní. Vývojáři
 
    Někdy můžete narazit na kusy JavaScript kódu kdekoliv uvnitř HTML. Tomu se říká _handler_ a slouží ke spuštění určité části kódu pouze pro danou část HTML.
 
-Poznámka: Prohlížeč čte kód v pořadí, v jakém se v souboru objevuje. Pokud se JavaScript načte první a má ovlivnit HTML, které ještě nebylo načteno, mohou vzniknout problémy. Starším řešením bylo umístit JavaScript na konci `</body>`, novější řešení pracují s koncepty `defer` nebo `async`. My budeme používat externí JS a budeme ovlivňovat i podobu HTML, takže si přidáme `defer`
+   ```html
+   <form onsubmit="validujForm()"></form>
+   ```
+
+Poznámka: Prohlížeč čte kód v pořadí, v jakém se v souboru objevuje. Pokud se JavaScript načte první a má ovlivnit HTML, které ještě nebylo načteno, mohou vzniknout problémy. Starším řešením bylo umístit JavaScript na konci `</body>`, novější řešení pracují s&nbsp;koncepty `defer` nebo `async`. My budeme používat externí JS a budeme ovlivňovat i podobu HTML, takže si přidáme `defer`
 
 ```html
 <script src="script.js" defer></script>
 ```
 
-## Příklad "Hello world!"
+## Úvodní příklad
 
-Seznámení s JavaScriptem je už náročnější než seznámení s HTML a CSS.
+Seznámení s JavaScriptem je už náročnější než seznámení s HTML a CSS. Ale protože už znáte Python, řada konceptů vám bude povědomá.
 
 1. Jděte na svou testovací stránku s receptem a vytvořte nový soubor pojmenovaný `script.js` a uložte jej.
 2. Ve vašem souboru `index.html` zadejte tento kód na nový řádek, právě před uzavírací značkou `</head>`:
 
    ```html
-   <script src="script.js"></script>
+   <script src="script.js" defer></script>
    ```
 
 3. Přidejte tento kód do souboru script.js:
@@ -62,21 +64,28 @@ Seznámení s JavaScriptem je už náročnější než seznámení s HTML a CSS.
    mujNadpis.textContent = 'Nejlepší recept světa!';
    ```
 
-Ujistěte se, že jsou soubory HTML a JavaScript uloženy. Poté načtěte index.html ve svém prohlížeči. Nadpis vaší webové stránky se změnil!
+Ujistěte se, že jsou soubory HTML a JavaScript uloženy. Poté načtěte `index.html` ve svém prohlížeči. Nadpis vaší webové stránky se změnil!
 
 ### Co se stalo?
 
-Text nadpisu se změnil pomocí JavaScriptu. Udělali jste to pomocí funkce zvané querySelector(), která získá odkaz na váš nadpis a uloží ho do proměnné pojmenované mujNadpis. To je podobné tomu, co jsme dělali s výběrem v CSS (nazývali jsme to selektor). Když chcete něco udělat s prvkem, musíte jej nejprve vybrat.
+Text nadpisu se změnil pomocí JavaScriptu. Udělali jste to pomocí funkce zvané `querySelector()`, která získá odkaz na váš nadpis a uloží ho do proměnné pojmenované `mujNadpis`. To je podobné tomu, co jsme dělali s výběrem v CSS (nazývali jsme to selektor). Když chcete něco udělat s prvkem, musíte jej nejprve vybrat.
 
-Poté kód nastaví hodnotu vlastnosti textContent proměnné mujNadpis (která představuje obsah nadpisu) na 'Nejlepší recept světa!'.
+Poté kód nastaví hodnotu vlastnosti textContent proměnné `mujNadpis` (která představuje obsah nadpisu) na 'Nejlepší recept světa!'.
 
 ## JavaScript výstup
 
 V Pythonu máme `print()`, v JS máme `console.log()`, `alert()` nebo zápis přímo do HTML pomocí `document.write()`.
 
 ```javascript
-console.log('Ahoj, tady tvůj bug.');
+console.log('Ahoj, tady tvůj recept.');
 ```
+
+A kde najít tu JS konzoli? Tam, kde jsme si ukazovali zdrojový kód jakékoliv webové stránky - v tzv. Inspektoru. Zkuste:
+
+- **Mac**: `Cmd + Opt + J`
+- **Windows**: `Ctrl + Shift + J`
+
+a vyberte záložku `Console`. Jak už bylo řešeno, JS běží přímo v prohlížeči, takže tuto konzoli můžete použít na jakékoliv webové stránce. Další příklady si tak můžete zkoušet přímo tam.
 
 ## Proměnné
 
@@ -118,7 +127,13 @@ let mojePromenna = 'Marley';
 mojePromenna;
 ```
 
-## Datové typy
+Pokud se jedná o proměnnou, kterou ale měnit nechceme, místo `let` použijeme `const`:
+
+```javascript
+const mojePromenna = 'Navždy Bob';
+```
+
+## Základní datové typy
 
 | Proměnná | Popis                                                                                                                                           | Příklad                                         |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
@@ -128,7 +143,7 @@ mojePromenna;
 | Array    | struktura, která vám umožňuje uložit více hodnot v jednom odkazu, na každého člena pole se dostaneme pomocí indexu, tedy takto: mojePromenna[0] | [1, 'Bob', 'Steve', 10]                         |
 | Object   | To může být cokoli. Vše v JavaScriptu je objekt.                                                                                                | let mojePromenna = document.querySelector('h1') |
 
-## Operátory neznámé v pythonu
+## Operátory neznámé v Pythonu
 
 ### Přísná rovnost
 
@@ -137,7 +152,11 @@ Provádí test na to, zda jsou dvě hodnoty stejné a stejného datového typu. 
 
 ```javascript
 let mojePromenna = 3;
-mojePromenna === 4;
+mojePromenna === 3; /* true */
+mojePromenna === '3'; /* false */
+
+/* porovnání známé z Pythonu: */
+mojePromenna == '3'; /* true */
 ```
 
 ### Negace
@@ -151,26 +170,26 @@ Pro "Not" je základní výraz true, ale porovnání vrací false, protože ho z
 
 ```javascript
 let mojePromenna = 3;
-!(mojePromenna === 3);
+!(mojePromenna === 3); /* false */
 ```
 
-"Does-not-equal" dává v zásadě stejný výsledek s odlišnou syntaxí. Zde testujeme "je mojePromenna NEROVNO 3". Vrací false, protože mojePromenna JE rovno 3:
+"Does-not-equal" dává v zásadě stejný výsledek s odlišnou syntaxí. Zde testujeme "je mojePromenna NEROVNO 3?". Vrací false, protože mojePromenna JE rovno 3:
 
 ```javascript
 let mojePromenna = 3;
-mojePromenna !== 3;
+mojePromenna !== 3; /* false */
 ```
 
 ## Podmínky
 
-Podmínky jsou kódové struktury používané k testování, zda výraz vrací true nebo ne. Velmi běžnou formou podmínek je instrukce if...else. Např.
+Podmínky jsou kódové struktury používané k testování, zda výraz vrací true nebo ne. Hlavní (ne jedinou) formou podmínek je instrukce if ... else if ... else. Např.
 
 ```javascript
 let zmrzka = 'čokoláda';
 if (zmrzka === 'čokoláda') {
   alert('Miluju čokoládovou zmrzlinu!');
 } else {
-  alert('Ale má oblíbená je čokoládová …');
+  alert('Ale já mám radši čokoládovou…');
 }
 ```
 
@@ -203,14 +222,14 @@ function nasobeni(cislo1, cislo2) {
 }
 ```
 
-Poznámka: Příkaz `return` říká prohlížeči, aby vrátil hodnotu proměnné result z funkce, takže je k dispozici k použití.
+Poznámka: Příkaz `return` znáte, funguje stejně jako v Pythonu. Říká prohlížeči, aby vrátil hodnotu proměnné result z&nbsp;funkce, takže je k&nbsp;dispozici k použití.
 
 ## Události
 
 A máme tady tu slavnou dynamickou interakci s uživatelem.
-Skutečná interaktivita na webových stránkách vyžaduje manipulaci s událostmi. Jedná se o kódové struktury, které naslouchají aktivitě v prohlížeči a spouštějí kód jako odpověď.
+Skutečná interaktivita na webových stránkách vyžaduje manipulaci s&nbsp;událostmi. Jedná se o kódové struktury, které naslouchají aktivitě v prohlížeči a spouštějí kód jako odpověď.
 
-Nejjasnějším příkladem je manipulace s událostí kliknutí, která je vyvolána prohlížečem při kliknutí na něco myší. Pro demonstraci zadejte do konzole následující kód a poté klikněte na aktuální webovou stránku:
+Nejjasnějším příkladem je manipulace s událostí kliknutí `click`, která je vyvolána prohlížečem při kliknutí na něco myší. Pro demonstraci zadejte do konzole následující kód a poté klikněte na aktuální webovou stránku:
 
 ```javascript
 document.querySelector('html').addEventListener('click', () => {
@@ -218,13 +237,13 @@ document.querySelector('html').addEventListener('click', () => {
 });
 ```
 
-Existuje několik způsobů, jak připojit manipulátor událostí k elementu. Zde vybíráme element <html>. Poté zavoláme jeho funkci addEventListener(), předáváme název události, na kterou naslouchat ('click') a funkci, která se spustí, když událost nastane.
+Existuje několik způsobů, jak připojit manipulátor událostí k elementu. Zde vybíráme element `<html>`. Poté zavoláme jeho funkci `addEventListener()`, předáváme název události, na kterou naslouchat ('click') a funkci, která se spustí, když událost nastane.
 
-Funkci, kterou jsme právě předali addEventListener(), nazýváme anonymní funkce, protože nemá jméno.
+_Poznámka_: Funkci, kterou jsme právě předali `addEventListener()`, nazýváme anonymní funkce, protože nemá jméno. Vyjadřuje ji jen konstrukt `() => {}`
 
 ## Manipulace s obsahem stránky
 
-Pomocí JavaScriptu můžeme měnit obsah stránky dynamicky. To zahrnuje přidávání, odebírání a měnění prvků na stránce v reálném čase. Pracovta se dá jak s HTML, tak CSS.
+Pomocí JavaScriptu můžeme měnit obsah stránky dynamicky. To zahrnuje přidávání, odebírání a měnění prvků na stránce v&nbsp;reálném čase. Pracovat se dá jak s HTML, tak CSS.
 
 ### Dokumentový objektový model (DOM)
 
@@ -251,16 +270,17 @@ const formular = document.querySelector('h2');
 formular.style.color = 'red';
 ```
 
-Stejně jako s řadou jiných věcí, existuje v JS řada způsobů, jak vybrat DOM element.
-Některé jsou modernější, jiné se dnes už tak nepoužívají, každopádně nejčastější jsou:
+Stejně jako s řadou jiných věcí, existuje v JS několik způsobů, jak dělat to samé, tedy vybrat DOM element.
+Některé jsou modernější, jiné se dnes už tak nepoužívají, ale dost možná se s nimi potkáte. Nejčastější jsou:
 
+- `querySelector(tag#id.class)` pro výběr prvního tagu, id nebo třídy (tzv. class) na stránce
 - `querySelectorAll(element)` pro výběr všech daných elementů na stránce
-- `getElementById()` pro výběr podle specifického atributu id
-- `getElementsByClassName()` pro výběr podle tzv. class (sloužící k definici CSS)
+- `getElementById(jmeno_id)` pro výběr podle specifického atributu id
+- `getElementsByClassName(jmeno_tridy)` pro výběr podle třídy (sloužící k definici CSS)
 
 ## Komentáře
 
-Komentáře jsou úryvky textu, které lze přidat spolu s kódem. Prohlížeč ignoruje text označený jako komentáře. Komentáře v JavaScriptu můžete psát stejně jako v CSS:
+Komentáře jsou úryvky textu, které lze přidat spolu s kódem. Stejně jako terminál, i prohlížeč ignoruje text označený jako komentáře. Komentáře v JavaScriptu můžete psát stejně jako v CSS:
 
 ```javascript
 /*
@@ -285,4 +305,4 @@ A pak jsou tady "_těžké váhy_" frontend frameworků, které stojí hlavně n
 - [Vue.js](https://vuejs.org/)
 
 Pro začátečníky se doporučuje **React** nebo **Vue**. **React** má nejširší základnu uživatelů, **Vue** je jednodušší především pro člověka,
-který v JS nemá pevné základy. **Angular** je velmi komplexní, i proto je spíš na ústupu, ale zároveň právě proto a také protože je nejstarší z těch tří, jede na něm řada firem a velkých projektů.
+který v&nbsp;JS nemá pevné základy. **Angular** je velmi komplexní, i proto je spíš na ústupu, ale zároveň právě proto a také protože je nejstarší z&nbsp;těch tří, jede na něm řada firem a velkých projektů.

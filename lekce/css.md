@@ -309,33 +309,40 @@ nejčastější:
     text-decoration: underline;
   }
   ```
-- **text-align**: horizontální zarovnání textu
-    <div style="text-align:right">right</div>      
+- **text-align**: horizontální zarovnání textu (vlevo, na střed, vpravo, do bloku)
+
+  ```css
+  body {
+    text-align: right;
+  }
+  ```
+
+    <!-- <div style="text-align:right">right</div>      
     <div style="text-align:center">center</div>
     <div style="text-align:left">left</div>
-    <br>
-    <div style="text-align:justify;"><span style="font-weight:bold">justify:</span> Lorem ipsum dolor sit amet,
+    <br> -->
+    <!-- <div style="text-align:justify;"><span style="font-weight:bold">justify:</span> Lorem ipsum dolor sit amet,
      consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Nulla est.
       Nullam at arcu a&nbsp;est sollicitudin euismod. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat.
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Maecenas aliquet accumsan leo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl.
          Aliquam id dolor. Nulla non lectus sed nisl molestie malesuada. Donec quis nibh at felis congue commodo.
-          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div>
+          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div> -->
 
   ```css
   body {
-    text-align: justify;
+    text-align: justify;    /* do bloku
   }
   ```
 
 - **text-indent**: odsazení textu
-    <div style="text-indent:50px;"> Lorem ipsum dolor sit amet,
+    <!-- <div style="text-indent:50px;"> Lorem ipsum dolor sit amet,
      consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Nulla est.
       Nullam at arcu a&nbsp;est sollicitudin euismod. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat.
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Maecenas aliquet accumsan leo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl.
          Aliquam id dolor. Nulla non lectus sed nisl molestie malesuada. Donec quis nibh at felis congue commodo.
-          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div>
+          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div> -->
 
   ```css
   p {
@@ -344,13 +351,13 @@ nejčastější:
   ```
 
 - **letter-spacing**: mezery mezi písmeny
-    <div style="letter-spacing:3px;"> Lorem ipsum dolor sit amet,
+    <!-- <div style="letter-spacing:3px;"> Lorem ipsum dolor sit amet,
      consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Nulla est.
       Nullam at arcu a&nbsp;est sollicitudin euismod. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat.
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Maecenas aliquet accumsan leo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl.
          Aliquam id dolor. Nulla non lectus sed nisl molestie malesuada. Donec quis nibh at felis congue commodo.
-          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div>
+          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div> -->
 
   ```css
   p {
@@ -359,13 +366,14 @@ nejčastější:
   ```
 
 - **word-spacing**: mezery mezi slovy
-    <div style="word-spacing:2em;"> Lorem ipsum dolor sit amet,
+    <!-- <div style="word-spacing:2em;">
+     Lorem ipsum dolor sit amet,
      consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Nulla est.
       Nullam at arcu a&nbsp;est sollicitudin euismod. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat.
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Maecenas aliquet accumsan leo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl.
          Aliquam id dolor. Nulla non lectus sed nisl molestie malesuada. Donec quis nibh at felis congue commodo.
-          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div>
+          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div> -->
 
   ```css
   p {
@@ -374,13 +382,13 @@ nejčastější:
   ```
 
 - **line-height**: velikost řádku
-    <div style="line-height:5.0;"> Lorem ipsum dolor sit amet,
+    <!-- <div style="line-height:5.0;"> Lorem ipsum dolor sit amet,
      consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Nulla est.
       Nullam at arcu a&nbsp;est sollicitudin euismod. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat.
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Maecenas aliquet accumsan leo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl.
          Aliquam id dolor. Nulla non lectus sed nisl molestie malesuada. Donec quis nibh at felis congue commodo.
-          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div>
+          Curabitur ligula sapien, pulvinar a&nbsp;vestibulum quis, facilisis vel sapien. </div> -->
 
   ```css
   p {
@@ -430,222 +438,52 @@ Na příkladu to může vypadat takto:
 `border-width`, `border-style` a&nbsp;`border-color`. Hodnoty pro `border-style` jsou: _solid, dotted, dashed, double
 , groove, ridge, inset, outset._
 
+## Třídy a ID
+
+**CSS Třída**:
+Třída v CSS je jiná než v Pythonu, je to označení, které může být přiřazeno jednomu nebo více HTML elementům. Třídy umožňují skupinování a sdílení stejných stylů mezi různými elementy na stránce. Přidává se do HTML kódu pomocí atributu class. A ve stylesheetu je před názvem třídy tečka `.`, abychom ji odlišili od názvu HTML tagu.
+
+```html
+<div class="moje-trida">Obsah s třídou</div>
+```
+
+```css
+.moje-trida {
+  color: blue;
+  font-size: 16px;
+}
+```
+
+**CSS ID**:
+ID v CSS je jedinečné označení, které může být přiřazeno jednomu konkrétnímu HTML elementu na stránce. ID slouží k jednoznačné identifikaci daného elementu a umožňuje přiřazení specifických stylů nebo manipulaci s tímto konkrétním prvkem. Přidává se do HTML kódu pomocí atributu id. Je důležité si uvědomit, že každý ID by měl být na stránce unikátní.
+Při stylování přidáme před název id křížek `#`, abychom daný element odlišili od ostatních prvků.
+
+```html
+<p id="muj-id">Text s ID</p>
+```
+
+```css
+#muj-id {
+  text-align: center;
+  font-weight: bold;
+}
+```
+
 ## Pak se ještě může hodit vědět, jak v CSS napsat komentář:
 
 ```
 /* takhle */
 ```
 
-## Vše dohromady
+## Praktické cvičení
 
-`moje_stranka.html`
+Nastylujte si svoji stránku.
 
-```html
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>Moje první webová stránka</title>
-    <link href="styly.css" rel="stylesheet" />
-
-    <!-- Syntaxe komentáře v HTML -->
-  </head>
-
-  <body>
-    <h1>Moje první webová stránka</h1>
-
-    <h2>Nadpis 2</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ornare wisi eu metus. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus
-      libero, eget facilisis enim ipsum id lacus. In enim a&nbsp;arcu imperdiet malesuada. Itaque earum rerum hic tenetur a&nbsp;sapiente
-      delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nulla pulvinar
-      eleifend sem. Integer pellentesque quam vel velit. Fusce nibh. Fusce tellus. Nam libero tempore, cum soluta nobis est eligendi optio
-      cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Fusce
-      tellus. Nulla pulvinar eleifend sem. Mauris tincidunt sem sed arcu. Nullam faucibus mi quis velit.
-    </p>
-    <p>
-      Et harum quidem rerum facilis est et expedita distinctio. Nunc tincidunt ante vitae massa. Etiam neque. Etiam dui sem, fermentum
-      vitae, sagittis id, malesuada in, quam. Nunc auctor. Fusce wisi. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.
-      Aenean placerat. Nullam rhoncus aliquam metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      hymenaeos. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Pellentesque sapien. Morbi scelerisque luctus velit.
-      Fusce tellus. Donec vitae arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    </p>
-    <p>
-      Nullam eget nisl. <em>Mauris suscipit</em>, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel
-      metus. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Mauris tincidunt sem sed arcu. Etiam commodo dui eget wisi.
-      Maecenas fermentum, sem in pharetra pellentesque, <strong>turpis </strong>
-      volutpat ante, in pharetra metus odio a&nbsp;lectus. Vestibulum fermentum tortor id mi. Etiam dui sem, fermentum vitae, sagittis id,
-      malesuada in, quam. Aliquam erat volutpat. Etiam quis quam. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci.
-      Pellentesque pretium lectus id turpis. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Duis bibendum, lectus ut
-      viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Sed convallis magna eu sem. Nullam dapibus fermentum
-      ipsum. Duis risus. Duis pulvinar. Morbi scelerisque luctus velit. Etiam posuere lacus quis dolor.
-    </p>
-
-    <h2>Úkoly tohoto kurzu</h2>
-    <ul>
-      <li>Naučit se HTML, CSS a&nbsp;pokročilé knihovny <strong style="color:#3e7bac; background-color: #ffe56b;">Pythonu</strong></li>
-      <li>
-        Výpis některých knihoven:
-        <ol>
-          <li>Request</li>
-          <li>Click</li>
-          <li>Flask</li>
-          <li>SQLAlchemy</li>
-        </ol>
-      </li>
-      <li>Potěšit se z nových znalostí</li>
-    </ul>
-
-    <h2>Kde najdu informace o kurzu</h2>
-    <p>
-      <a href="https://naucse.python.cz/2020/praha-jaro-knihovny/"
-        ><img src="https://pyladies.cz/static/img/pyladies.png" width="300" alt="PyLadies logo"
-      /></a>
-    </p>
-
-    <h3>Tabulka</h3>
-    <table>
-      <tr>
-        <th>Sloupec 1</th>
-        <th>Sloupec 2</th>
-        <th>Sloupec 3</th>
-      </tr>
-      <tr>
-        <td>řádek 1, buňka 1</td>
-        <td>řádek 1, buňka 2</td>
-        <td>řádek 1, buňka 3</td>
-      </tr>
-      <tr>
-        <td>řádek 2, buňka 1</td>
-        <td>řádek 2, buňka 2</td>
-        <td>řádek 2, buňka 3</td>
-      </tr>
-      <tr>
-        <td>řádek 3, buňka 1</td>
-        <td>řádek 3, buňka 2</td>
-        <td>řádek 3, buňka 3</td>
-      </tr>
-      <tr>
-        <td>řádek 4, buňka 1</td>
-        <td>řádek 4, buňka 2</td>
-        <td>řádek 4, buňka 3</td>
-      </tr>
-    </table>
-
-    <h3>Formulář</h3>
-    <p><strong>Note:</strong> It looks the part, but won't do a&nbsp;damned thing.</p>
-
-    <form action="" method="post">
-      <p>Celé jméno:</p>
-      <p>
-        <input name="name" value="Tvoje jméno" />
-      </p>
-
-      <label for="fname">Křestní jméno:</label>
-      <input type="text" id="fname" name="fname" />
-
-      <label for="lname">Příjmení: </label>
-      <input type="text" id="lname" name="lname" />
-
-      <p>Komentář:</p>
-      <p>
-        <textarea rows="10" cols="20" name="comments">Tvůj komentář</textarea>
-      </p>
-
-      <p>Tvoje pohlaví:</p>
-      <p><input type="radio" name="gender" value="female" /> žena</p>
-      <p><input type="radio" name="gender" value="male" /> muž</p>
-
-      <select name="language">
-        <option>Python</option>
-        <option>JavaScript</option>
-        <option>C</option>
-      </select>
-
-      <p>
-        <input type="submit" value="Odeslat" />
-      </p>
-    </form>
-  </body>
-</html>
-```
-
-`styly.css`
-
-```css
-body {
-  font-family: arial, helvetica, sans-serif;
-  font-size: 14px;
-  color: black;
-  background-color: #ffc;
-  margin: 20px;
-  padding: 0;
-}
-
-/* Komentář v CSS */
-
-p {
-  line-height: 21px;
-}
-
-h1 {
-  color: #ffc;
-  background-color: #900;
-  font-size: 2em;
-  margin: 0;
-  margin-bottom: 7px;
-  padding: 4px;
-  font-style: italic;
-  text-align: center;
-  letter-spacing: 0.5em;
-  border-bottom-style: solid;
-  border-bottom-width: 0.5em;
-  border-bottom-color: #c00;
-}
-
-h2 {
-  color: white;
-  background-color: #090;
-  font-size: 1.5em;
-  margin: 0;
-  padding: 2px;
-  padding-left: 14px;
-}
-
-h3 {
-  color: #999;
-  font-size: 1.25em;
-}
-
-img {
-  border-style: dashed;
-  border-width: 2px;
-  border-color: #cccccc;
-}
-
-a {
-  text-decoration: none;
-}
-
-strong {
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-li {
-  color: #990000;
-  font-style: italic;
-}
-
-table {
-  background-color: #ccc;
-}
-
-em {
-  color: deeppink;
-}
-```
+- obarvěte nadpis jinou barvou písma,
+- obalte nadpis do jinak barevného podkladu
+- zarovnejte obrázek na prostředek
+- zarovnejte text postupu do bloku
+- popusťte uzdu fantazii ;-)
 
 ## Závěr
 

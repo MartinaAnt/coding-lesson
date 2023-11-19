@@ -379,3 +379,12 @@ Zdá se ti to jako zmatek? Zkus kód vložit do editoru a&nbsp;pusť si ho v pro
 
 HTML samozřejmě obsahuje spoustu zákoutí a&nbsp;podivností, ale při běžné každodenní práci jsou
 formuláře nejkomplexnější oblast. Neukázali jsem si všechno, ale teď už víš, jak to asi funguje.
+
+## Praktické cvičení
+
+    Vytvořte webovou stránku o vašem nejoblíbenějím receptu, která bude obsahovat
+     - název receptu v nadpise
+     - obrázek
+     - seznam ingrediencí
+     - očíslovaný postup
+     - odkaz na podobné recepty
