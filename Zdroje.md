@@ -23,5 +23,8 @@ https://dev.to/triggerdotdev/17-javascript-repositories-to-become-the-best-devel
 ### Čisté HTML & CSS
 
 https://codepen.io/jh3y/pen/PoGbxLp
+
 https://codepen.io/jh3y/pen/LYJMPBL
+
 https://codepen.io/jh3y/full/MWzwamV
+
