@@ -1,4 +1,5 @@
 # coding-lesson
-Lekce HTML a CSS pro PyLadies
 
-Lesson about HTML and CSS for PyLadies
+Lekce HTML, CSS a JavaScript pro PyLadies
+
+Lessons about HTML, CSS and JavaScript for PyLadies

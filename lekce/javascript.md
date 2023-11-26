@@ -224,6 +224,34 @@ function nasobeni(cislo1, cislo2) {
 
 Poznámka: Příkaz `return` znáte, funguje stejně jako v Pythonu. Říká prohlížeči, aby vrátil hodnotu proměnné result z&nbsp;funkce, takže je k&nbsp;dispozici k použití.
 
+## Cykly
+
+I ty má JS stejně jako Python a dokonce jsou si velmi podobné. `for` pro pevný počet opakování a `while` pro
+fungování dokud platí podmínka. Jen samotná syntax se opět trochu liší.
+
+Takto můžete vytvořit seznam čísel včetně odpovídajících HTML tagů pomocí obou typů cyklů:
+
+```javacript
+  document.write("<ul>");
+
+  for (let i = 1; i <= 10; i++)
+      document.write("<li>" + i + "</li>");
+
+  document.write("</ul>");
+```
+
+```javacript
+  document.write("<ul>");
+
+  let i = 1;
+  while (i <= 10) {
+      document.write("<li>" + i + "</li>");
+      i++;
+  }
+
+  document.write("</ul>");
+```
+
 ## Události
 
 A máme tady tu slavnou dynamickou interakci s uživatelem.
@@ -238,6 +266,8 @@ document.querySelector('html').addEventListener('click', () => {
 ```
 
 Existuje několik způsobů, jak připojit manipulátor událostí k elementu. Zde vybíráme element `<html>`. Poté zavoláme jeho funkci `addEventListener()`, předáváme název události, na kterou naslouchat ('click') a funkci, která se spustí, když událost nastane.
+
+Kompletní seznam událostí, na které se dá reagovat najdete například zde: https://www.w3schools.com/jsref/dom_obj_event.asp. Pojmenování událostí je dané, nelze například `submit` nahradit českým `odeslat`.
 
 _Poznámka_: Funkci, kterou jsme právě předali `addEventListener()`, nazýváme anonymní funkce, protože nemá jméno. Vyjadřuje ji jen konstrukt `() => {}`
 
@@ -268,6 +298,12 @@ A nebo i CSS!
 ```javascript
 const formular = document.querySelector('h2');
 formular.style.color = 'red';
+```
+
+Případně není nutné něco měnit, může nám jít jen o získání dané hodnoty. V následujícím kódu najdeme HTML tag `input` s vlastním id `jmeno` a zjistíme jeho aktuální hodnotu.
+
+```javascript
+const jmeno = document.querySelector('input#jmeno').value;
 ```
 
 Stejně jako s řadou jiných věcí, existuje v JS několik způsobů, jak dělat to samé, tedy vybrat DOM element.
@@ -306,3 +342,30 @@ A pak jsou tady "_těžké váhy_" frontend frameworků, které stojí hlavně n
 
 Pro začátečníky se doporučuje **React** nebo **Vue**. **React** má nejširší základnu uživatelů, **Vue** je jednodušší především pro člověka,
 který v&nbsp;JS nemá pevné základy. **Angular** je velmi komplexní, i proto je spíš na ústupu, ale zároveň právě proto a také protože je nejstarší z&nbsp;těch tří, jede na něm řada firem a velkých projektů.
+<br>
+<br>
+<br>
+
+# A teď praktické cvičení
+
+Formuláře jsou klíčovým prvkem interaktivity na webových stránkách. JavaScript nám poskytuje nástroje k manipulaci s formuláři, což zahrnuje získávání a nastavování hodnot, validaci vstupů a reakce na události spojené s formulářem.
+
+## Úkol 1: Základní formulář
+
+Vytvořte jednoduchý HTML formulář obsahující pole pro zadání jména a emailu a tlačítko s nápisem "Odeslat". Napište JavaScript kód, který po stisknutí tlačítka vypíše jméno zadané v poli do konzole.
+
+_Nápověda 1_: Lépe se vám bude hledat HTML element, když mu přiřadíte atribut "id" `<input id="jmeno">` a hledat budete jako `document.querySelector('input#jmeno')`.
+
+_Nápověda 2_: Událost pro odeslání se nazývá `submit`.
+
+## Úkol 2: Validace formuláře
+
+Rozšiřte předchozí formulář o validaci. Přidejte podmínku, která zkontroluje, zda bylo jméno zadáno. Pokud není, vypište chybovou zprávu. Pokud je jméno zadáno, vypište ho do konzole.
+
+## Úkol 3: Dynamická odezva na změny
+
+Napište JavaScript kód, který dynamicky reaguje na změny v polích a aktualizuje výstup v reálném čase. Pokud uživatel zadá jméno, měl by se okamžitě přímo na webové stránce zobrazit text "Díky za přihlášení, [zadané jméno]!". (ne v konzoli, ale přímo u formuláře.)
+
+## Úkol 4: Odesílání formuláře
+
+Napište JavaScript kód, který zachytí událost odeslání formuláře a provede jednoduchou akci, například výpis všech zadaných údajů do konzole.
